@@ -1,22 +1,38 @@
 version: "3.8"
-services: 
+
+services:
+  db:
+    image: mariadb:10.6
+    container_name: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: easycrud
+      MYSQL_USER: easycrud
+      MYSQL_PASSWORD: easycrud
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_db:/var/lib/mysql
+
   backend:
     build:
       context: ./backend
       dockerfile: dockerfile
     ports:
-      - 8080:8080
- #   depends_on:
-  #     -db
+      - "8080:8080"
+    depends_on:
+      - db
 
   frontend:
-    build: 
-      context: ./frontend 
+    build:
+      context: ./frontend
       dockerfile: dockerfile
     ports:
-      - 80:80 
+      - "80:80"
     depends_on:
-       - backend
+      - backend
 
-#volumes:
- #  mariadb_db:       
+volumes:
+  mariadb_db:
+
