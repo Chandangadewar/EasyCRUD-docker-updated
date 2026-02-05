@@ -7,7 +7,7 @@ A full-stack CRUD application using:
 - MariaDB (Database)
 - Docker & Docker Compose
 
-## provide ip in .env file
+## Provide ip in .env file
 
 ## Run the application
 
