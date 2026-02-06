@@ -14,11 +14,11 @@ A full-stack CRUD application using:
 ```bash
 docker compose up --build
 ```
-#For Mariadb
+For Mariadb
 
 ```bash
 docker exec -it mariadb mysql -u easycrud -p
 ```
-#Password- easycrud
+Password- easycrud
 
 
