@@ -18,7 +18,7 @@ The application features a **Spring Boot backend**, **React + Vite frontend**, a
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/EasyCRUD-docker-updated.git
+git clone https://github.com/chandangadewar/EasyCRUD-docker-updated.git
 cd EasyCRUD-docker-updated
 2. Configure environment variables
 Open the .env file in the frontend folder
